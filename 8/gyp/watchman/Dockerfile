@@ -13,7 +13,7 @@ RUN curl -L -o watchman.tgz https://github.com/facebook/watchman/archive/v${WATC
     ./autogen.sh && \
     ./configure --enable-statedir=/tmp --without-python && make
 
-FROM webfus/node-ci-image:8-gyp
+FROM webfus/nodejs-ci-image:8-gyp
 
 ENV WATCHMAN_VERSION 4.9.0
 
